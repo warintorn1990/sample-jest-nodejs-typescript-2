@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">45% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/20</span>
+                <span class='fraction'>9/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">16.67% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>1/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>2/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">42.11% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>8/19</span>
             </div>
         
             
@@ -93,32 +93,19 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -129,19 +116,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import * as Nedb from 'nedb';</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import * as Nedb from 'nedb';
 import { User } from '../Models/UserModels';
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >export class <span class="cstat-no" title="statement not covered" >U</span></span>sersDBAccess </span>{
+export class UsersDBAccess {
 &nbsp;
     private nedb: Nedb;
 &nbsp;
-<span class="fstat-no" title="function not covered" >    constructor(<span class="cstat-no" title="statement not covered" >n</span>edb = new Nedb('databases/Users.db')) {</span>
-<span class="cstat-no" title="statement not covered" >        this.nedb = nedb;</span>
-<span class="cstat-no" title="statement not covered" >        this.nedb.loadDatabase();</span>
+    constructor(<span class="missing-if-branch" title="else path not taken" >E</span>nedb = new Nedb('databases/Users.db')) {
+        this.nedb = nedb;
+        this.nedb.loadDatabase();
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    public async <span class="cstat-no" title="statement not covered" >p</span>utUser(user: User) {</span>
+<span class="fstat-no" title="function not covered" >    public async p</span>utUser(user: User) {
 <span class="cstat-no" title="statement not covered" >        return new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >            this.nedb.insert(user, <span class="fstat-no" title="function not covered" >(e</span>rr: Error | null) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                if (err) {</span>
@@ -153,7 +153,7 @@ import { User } from '../Models/UserModels';
         });
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    public async <span class="cstat-no" title="statement not covered" >g</span>etUsersByName(name: string): Promise&lt;User[]&gt; {</span>
+<span class="fstat-no" title="function not covered" >    public async g</span>etUsersByName(name: string): Promise&lt;User[]&gt; {
         const <span class="cstat-no" title="statement not covered" >regEx = new RegExp(name);</span>
 <span class="cstat-no" title="statement not covered" >        return new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >            this.nedb.find({ name: regEx }, <span class="fstat-no" title="function not covered" >(e</span>rr: Error, docs: any[]) =&gt; {</span>
@@ -165,14 +165,14 @@ import { User } from '../Models/UserModels';
             })
         });
     }
-<span class="cstat-no" title="statement not covered" >}</span></pre></td></tr></table></pre>
+}</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jul 17 2021 20:00:10 GMT+0700 (Indochina Time)
+                at Sun Jul 18 2021 09:05:53 GMT+0700 (Indochina Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>
